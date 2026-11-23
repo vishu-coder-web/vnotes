@@ -14,7 +14,7 @@
 
 <p align="center">
   <a href="https://github.com/vishu-coder-web/vnotes">GitHub Repository</a> •
-  <a href="DEMO_URL_HERE">Try Demo</a> •
+  <a href="https://vnotes-vishu.vercel.app/">Try Demo</a> •
   <a href="https://github.com/vishu-coder-web/vnotes/releases">Download</a>
 </p>
 
@@ -107,7 +107,7 @@ Browser support targets modern browsers. If you encounter compatibility problems
 
 Visit the VNotes demo:
 
-[Open VNotes Demo](DEMO_URL_HERE)
+[Open VNotes Demo](https://vnotes-vishu.vercel.app/)
 
 No registration required.
 
