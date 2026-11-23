@@ -1,0 +1,40 @@
+.fab-btn {
+  background-color: var(--primary-accent);
+  padding: 5px 10px;
+  border-radius: 100%;
+  border: 1px solid var(--border);
+  outline: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 300ms;
+  position: fixed;
+  bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 5%;
+  width: 40px;
+  height: 40px;
+}
+
+.fab-icon {
+  font-size: var(--font-size);
+}
+
+.fab-btn:hover,
+.fab-btn:active {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 767px) {
+  .fab-btn {
+    width: 55px;
+    height: 55px;
+    bottom: 17%;
+  }
+
+  .fab-icon {
+    font-size: calc(var(--font-size) + 2px);
+  }
+}

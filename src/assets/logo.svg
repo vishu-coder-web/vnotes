@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+    
+    <!-- Pencil / Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22C55E" />
+      <stop offset="100%" stop-color="#16A34A" />
+    </linearGradient>
+    
+    <!-- Soft Shadow -->
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- App Icon Background Container -->
+  <rect x="32" y="32" width="448" height="448" rx="100" fill="url(#bgGrad)" />
+
+  <!-- Main Note Pad Base with Shadow -->
+  <g filter="url(#dropShadow)">
+    <!-- Paper Sheet -->
+    <rect x="128" y="112" width="256" height="304" rx="28" fill="#FFFFFF" />
+
+    <!-- Top Accent Header Line on Paper -->
+    <rect x="168" y="160" width="120" height="18" rx="9" fill="#E0E7FF" />
+
+    <!-- Text Lines Placeholder -->
+    <rect x="168" y="208" width="176" height="14" rx="7" fill="#94A3B8" opacity="0.6" />
+    <rect x="168" y="244" width="144" height="14" rx="7" fill="#94A3B8" opacity="0.6" />
+    <rect x="168" y="280" width="112" height="14" rx="7" fill="#94A3B8" opacity="0.6" />
+
+    <!-- Checkmark Badge / Active Task Indicator -->
+    <circle cx="336" cy="328" r="36" fill="url(#accentGrad)" />
+    <path d="M320 328 L330 338 L352 316" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

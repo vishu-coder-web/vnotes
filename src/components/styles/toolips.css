@@ -1,0 +1,33 @@
+.toolips {
+  color: var(--primary-text);
+  position: fixed;
+  bottom: 7vh;
+  right: 3vw;
+  display: flex;
+  gap: 9px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border);
+  padding: 10px;
+  border-radius: 14px;
+  max-width: 400px;
+  font-weight: bold;
+  transition: transform 300ms;
+  background-color: var(--card-surface);
+}
+
+.toolips:hover {
+  transform: scale(0.95);
+}
+
+.toolips .alert {
+  color: var(--warning);
+}
+
+.toolips .info {
+  color: var(--success);
+}
+
+.close {
+  transform: translateX(400px);
+}

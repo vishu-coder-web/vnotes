@@ -1,0 +1,24 @@
+{
+  "name": "vnotes",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@preact/signals": "^2.11.3",
+    "dexie": "^4.4.7",
+    "lucide-preact": "^1.60.0",
+    "preact": "^10.29.8",
+    "prosekit": "^0.23.1",
+    "split.js": "^1.6.5",
+    "wouter-preact": "^3.13.0"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "vite": "^8.3.4"
+  }
+}

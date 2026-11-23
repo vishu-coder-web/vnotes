@@ -1,0 +1,152 @@
+.sidebar {
+  height: 100%;
+  min-width: max(20%, 270px);
+  padding: 10px;
+  background-color: var(--background);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.search input {
+  flex: 1;
+  padding: 7px;
+  box-sizing: border-box;
+  font-size: calc(var(--font-size) - 2px);
+  border: none;
+  border-bottom: 1px solid transparent;
+  color: var(--primary-text);
+  background-color: transparent;
+}
+
+.search input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.search-btn {
+  background-color: transparent;
+  padding: 5px 10px;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  color: var(--primary-text);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color, transform;
+  transition-duration: 300ms;
+}
+
+.search-btn:hover,
+.search-btn:active {
+  background-color: var(--elevated-surface);
+  transform: scale(0.95);
+}
+
+.notes-list {
+  padding: 10px 20px;
+  flex: 1;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.note-card {
+  padding: 10px;
+  padding-right: 20px;
+  color: var(--primary-text);
+  cursor: pointer;
+  font-size: var(--font-size);
+  font-weight: bold;
+  border-radius: 7px;
+  transition:
+    background-color,
+    transform 300ms;
+}
+
+.note-card:hover,
+.note-card:active {
+  background-color: var(--elevated-surface);
+}
+
+.note-card:active {
+  transform: scale(0.95);
+}
+
+.active {
+  color: var(--info);
+}
+
+.empty-note-card {
+  width: 100%;
+  flex: 1;
+  min-height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-text);
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  gap: 15%;
+  border-top: 1px solid var(--border);
+}
+
+.navigation-btn {
+  background-color: transparent;
+  color: var(--primary-text);
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.navigation-btn:hover,
+.navigation-btn:active {
+  background-color: var(--elevated-surface);
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    width: 90vw !important;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    overflow: hidden;
+    border-right: 1px solid var(--border);
+    transition: transform 300ms;
+  }
+
+  .search input {
+    max-width: 65%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .note-card {
+    font-weight: bold;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .close-sidebar {
+    transform: translateX(-100%);
+  }
+}
+
+/*Also See /components/editor.jsx for splitJs implementation.*/

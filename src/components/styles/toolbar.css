@@ -1,0 +1,38 @@
+.toolbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: scroll;
+  padding: 8px;
+  scrollbar-width: none;
+  flex-shrink: 0;
+  min-height: 0;
+}
+
+.toolbar-btn {
+  background-color: transparent;
+  color: var(--primary-text);
+  font-weight: bold;
+  border: none;
+  padding: 2px 3px;
+  transition: transform 200ms;
+  border-radius: 4px;
+}
+
+.toolbar-btn:hover,
+.toolbar-btn:active {
+  background-color: var(--card-surface);
+}
+
+@media screen and (max-width: 767px) {
+  .toolbar {
+    justify-content: flex-start;
+    padding: 8px;
+    border-top: 1px solid var(--border);
+  }
+
+  .toolbar-btn {
+    padding: 6px 8px;
+  }
+}

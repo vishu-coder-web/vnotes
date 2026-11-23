@@ -1,0 +1,32 @@
+.footer {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  border-top: 1px solid var(--border);
+  gap: 5px;
+}
+
+.footer-text {
+  width: 90%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.status {
+  color: var(--secondary-text);
+  align-self: flex-end;
+}
+
+.red {
+  color: red;
+}
+
+@media screen and (max-width: 767px) {
+  .editor .footer {
+    justify-content: center;
+  }
+
+  .editor .footer-text {
+    display: none;
+  }
+}

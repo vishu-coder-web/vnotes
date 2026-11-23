@@ -1,0 +1,76 @@
+.settings {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  color: var(--primary-text);
+  border-left: 1px solid var(--border);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.settings-card {
+  background-color: var(--card-surface);
+  padding: 20px;
+  width: 100%;
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.settings-card .heading {
+  margin-bottom: 10px;
+}
+
+.settings-card .property {
+  font-size: var(--font-size);
+}
+
+.settings-card .setting {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings-card .input {
+  border: 1px solid var(--border);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.settings-card .input:focus {
+  outline: none;
+  border: 1px dashed var(--border);
+}
+
+.settings-card select {
+  border: 1px solid var(--border);
+  padding: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--primary-text);
+}
+
+.settings-card select:focus {
+  outline: none;
+}
+
+.settings-card .coming-soon {
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .settings-card .input {
+    max-width: 50%;
+  }
+
+  .settings {
+    border: none;
+  }
+}

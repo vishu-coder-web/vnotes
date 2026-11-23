@@ -1,0 +1,80 @@
+.prosekit-container {
+  overflow-y: scroll;
+  padding-bottom: 25px;
+}
+
+.prosekit-placeholder {
+  color: var(--secondary-text);
+  font-size: 1rem;
+}
+
+.ProseMirror {
+  font-family: var(--editor-font-family), sans-serif;
+  font-size: var(--editor-font-size);
+}
+
+.ProseMirror a {
+  color: var(--primary-accent);
+}
+
+.ProseMirror a:hover {
+  cursor: pointer;
+}
+
+.ProseMirror blockquote:before {
+  border-inline-start: 0.25em solid var(--elevated-surface);
+}
+
+.prosekit {
+  width: 99%;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  font-family: var(--editor-font-family), sans-serif;
+  font-size: var(--editor-font-size);
+  outline: none;
+  color: inherit;
+  line-height: 1.5;
+}
+
+.ProseMirror hr {
+  border: 0.5px solid var(--border);
+}
+
+.ProseMirror p {
+  margin: 0 0 6px;
+  font-size: 1em;
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3 {
+  font-weight: 600;
+  margin: 12px 0 6px;
+}
+
+.ProseMirror h1 {
+  font-size: 1.5em;
+}
+.ProseMirror h2 {
+  font-size: 1.25em;
+}
+.ProseMirror h3 {
+  font-size: 1.1em;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+.ProseMirror pre {
+  background: var(--card-surface);
+  font-family: monospace;
+  padding: 0.75em 1em;
+  border-radius: 0.375em;
+  margin: 1em 0;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+}
