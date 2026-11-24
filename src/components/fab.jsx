@@ -3,9 +3,9 @@ import { useEffect } from "preact/hooks";
 import { useLocation } from "wouter-preact";
 
 import "./styles/fab.css";
+
 import { currentOpenedNote } from "../store/notes.store.js";
 import { registerShortcut, unregisterShortcut } from "../utils/keyboard_shortcuts.js";
-
 import { keyboardShortcuts } from "../store/settings.store.js";
 
 const Fab = () => {

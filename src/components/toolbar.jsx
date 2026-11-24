@@ -41,19 +41,32 @@ import {
 } from "lucide-preact";
 
 import { useEffect } from "preact/hooks";
+import { defineReadonly } from "prosekit/extensions/readonly";
 
 import "./styles/toolbar.css";
+
 import { safeRun } from "../utils/error_handler.js";
 import { isZenMode } from "../store/notes.store.js";
 import { showToolips, askInput } from "../store/notes.helper.js";
 import { registerShortcut, unregisterShortcut } from "../utils/keyboard_shortcuts.js";
-import { defineReadonly } from "prosekit/extensions/readonly";
 
 const Toolbar = ({ editorInstance, saveNote, title }) => {
   let disableReadonly = null;
 
-
   const tasks = [
+    // History
+    {
+      name: "undo",
+      icon: <Undo2 size={20} />,
+      action: () => editorInstance.commands.undo(),
+    },
+
+    {
+      name: "redo",
+      icon: <Redo2 size={20} />,
+      action: () => editorInstance.commands.redo(),
+    },
+
     // Text formatting
     {
       name: "bold",
@@ -93,11 +106,11 @@ const Toolbar = ({ editorInstance, saveNote, title }) => {
       name: "reading-mode",
       icon: <BookOpen size={20} />,
       action: () => {
-        if(disableReadonly){
+        if (disableReadonly) {
           disableReadonly?.();
           disableReadonly = null;
           showToolips("Reading Mode is Off");
-        }else{
+        } else {
           disableReadonly = editorInstance.use(defineReadonly());
           showToolips("Reading Mode is On");
         }
@@ -146,7 +159,7 @@ const Toolbar = ({ editorInstance, saveNote, title }) => {
 
         askInput("Pick a Color", fields, (action, values) => {
           if (action === "ok" && values.length !== 0) {
-            editorInstance.commands.addTextColor({ color: values[0]});
+            editorInstance.commands.addTextColor({ color: values[0] });
           }
         });
         return true;
@@ -344,27 +357,6 @@ const Toolbar = ({ editorInstance, saveNote, title }) => {
 
   return (
     <div className="toolbar">
-      <button
-        className="toolbar-btn"
-        onMouseDown={(e) => e.preventDefault()}
-        aria-label="Undo"
-        title="Undo"
-        disabled={!editorInstance.commands.undo.canExec()}
-        onClick={() => editorInstance.commands.undo()}
-      >
-        <Undo2 size={20} />
-      </button>
-      <button
-        className="toolbar-btn"
-        onMouseDown={(e) => e.preventDefault()}
-        aria-label="Redo"
-        title="Redo"
-        disabled={!editorInstance.commands.redo.canExec()}
-        onClick={() => editorInstance.commands.redo()}
-      >
-        <Redo2 size={20} />
-      </button>
-
       {tasks.map((task) => (
         <button
           className="toolbar-btn"

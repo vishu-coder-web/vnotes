@@ -1,9 +1,9 @@
 import { effect } from "@preact/signals";
 
+import "./styles/settings.css";
+
 import { showToolips } from "../store/notes.helper.js";
 import { general, appearance, editor, keyboardShortcuts } from "../store/settings.store.js";
-
-import "./styles/settings.css";
 
 import Switch from "./switch.jsx";
 

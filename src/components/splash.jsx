@@ -2,6 +2,7 @@ import { useEffect } from "preact/hooks";
 
 import "./styles/splash.css";
 import appLogo from "../assets/logo.svg";
+
 import { isLoaded, splashScreenAnimation } from "../store/notes.store.js";
 import { showToolips } from "../store/notes.helper.js";
 

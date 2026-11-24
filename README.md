@@ -66,7 +66,6 @@ Just open VNotes and start writing.
 - Local-first storage – Notes are stored locally using IndexedDB.
 - JSON Import & Export – Import and export your notes in JSON format.
 - No account required – Open the application and start writing.
-- Offline support – Use platform-specific binaries without requiring an internet connection for normal local note-taking.
 
 ## Future development
 
@@ -88,16 +87,7 @@ VNotes is designed to be serverless and local-first.
 
 ## Platforms
 
-VNotes is primarily a web application, with downloadable binaries available for offline use.
-
-| Platform | Availability |
-| --- | --- |
-| Web | Supported |
-| Windows | Available |
-| macOS | Available |
-| Linux | Available |
-| Android | Not currently supported |
-| iOS | Not currently supported |
+VNotes is primarily a **web application.**
 
 Browser support targets modern browsers. If you encounter compatibility problems, please report them through GitHub Issues.
 
@@ -110,14 +100,6 @@ Visit the VNotes demo:
 [Open VNotes Demo](https://vnotes-vishu.vercel.app/)
 
 No registration required.
-
-### Download VNotes
-
-Download the appropriate binary for your platform from GitHub Releases:
-
-[Download VNotes](https://github.com/vishu-coder-web/vnotes/releases)
-
-Choose the version and package appropriate for your device.
 
 ### Run from Source
 

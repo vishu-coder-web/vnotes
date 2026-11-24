@@ -1,6 +1,7 @@
 import { Info, BadgeAlert } from "lucide-preact";
 
 import "./styles/toolips.css";
+
 import { toolipsData } from "../store/notes.store.js";
 
 const Toolips = () => {

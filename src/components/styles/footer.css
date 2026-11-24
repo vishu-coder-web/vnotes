@@ -1,20 +1,23 @@
 .footer {
   width: 100%;
   display: flex;
-  padding: 5px;
+  padding: 5px 10px;
   border-top: 1px solid var(--border);
   gap: 5px;
 }
 
 .footer-text {
-  width: 90%;
+  flex: 1;
   font-weight: bold;
   text-align: center;
 }
 
 .status {
   color: var(--secondary-text);
-  align-self: flex-end;
+}
+
+.version {
+  color: var(--info);
 }
 
 .red {
@@ -28,5 +31,14 @@
 
   .editor .footer-text {
     display: none;
+  }
+
+  .status,
+  .version {
+    flex: 1;
+  }
+
+  .status {
+    text-align: right;
   }
 }

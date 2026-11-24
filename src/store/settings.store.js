@@ -31,11 +31,11 @@ export const appearance = signal({
     value: "system-ui",
     options: ["Lato", "Google Sans", "Agrave Pro", "system-ui"],
   },
-  "Font Size": { type: "range", value: "16", max: "40" },
+  "Font Size": { type: "range", value: "16", max: "25" },
 });
 
 export const editor = signal({
-  "Editor Font Size": { type: "range", value: "16", max: "40" },
+  "Editor Font Size": { type: "range", value: "16", max: "25" },
   "Editor Font": {
     type: "select",
     value: "system-ui",

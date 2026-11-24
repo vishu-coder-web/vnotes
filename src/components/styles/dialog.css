@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   transform: translate(-50%, -50%);
-  padding: 10px 15px;
+  padding: 25px 20px;
   border: 1px solid var(--border);
   border-radius: 15px;
   color: var(--primary-text);
@@ -13,6 +13,15 @@
   gap: 5px;
   width: 100%;
   max-width: 400px;
+}
+
+.dialog > h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.dialog > p {
+  text-align: center;
 }
 
 .dialog-btn {
@@ -46,6 +55,6 @@
 @media screen and (max-width: 767px) {
   .dialog {
     padding: 20px 15px;
-    max-width: 300px;
+    max-width: 350px;
   }
 }

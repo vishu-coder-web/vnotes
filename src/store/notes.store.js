@@ -1,7 +1,8 @@
 import { signal } from "@preact/signals";
 
 // Global Variables (Without Signals)
-export const splashScreenAnimation = 3000;
+export const splashScreenAnimation = 2000;
+export const appVersion = "v0.1.0-alpha";
 
 // Global Variables (With Signals)
 export const currentOpenedNote = signal(0); // note.id, it should be a string, use 0 for no note opened.

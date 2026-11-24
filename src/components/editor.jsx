@@ -1,6 +1,4 @@
-import "prosekit/basic/style.css";
-import "prosekit/basic/typography.css";
-
+// Prosekit
 import { defineBasicExtension } from "prosekit/basic";
 import { createEditor, union } from "prosekit/core";
 import { ProseKit, useDocChange } from "prosekit/preact";
@@ -9,15 +7,20 @@ import { defineTextAlign } from "prosekit/extensions/text-align";
 import { defineHighlight } from "prosekit/extensions/highlight";
 import { defineTextColor } from "prosekit/extensions/text-color";
 
-import "./styles/editor.css";
-import "./styles/prosekit.css";
-
+// Preact
 import { useEffect, useMemo } from "preact/hooks";
 import { useSignal, useSignalEffect } from "@preact/signals";
 import { useSignalRef } from "@preact/signals/utils";
 
+// Others
 import { Trash, Menu } from "lucide-preact";
 import Split from "split.js";
+
+// CSS Files
+import "prosekit/basic/style.css";
+import "prosekit/basic/typography.css";
+import "./styles/editor.css";
+import "./styles/prosekit.css";
 
 import { deleteNoteDB, createNoteDB, updateNoteDB, getNoteDB } from "../database/db.web.js";
 import { currentOpenedNote, isZenMode, isSidebarOpen, isMobile } from "../store/notes.store.js";
@@ -62,7 +65,7 @@ const Editor = () => {
       defineTextAlign({ types: ["paragraph", "heading"] }),
       definePlaceholder({ placeholder: "Write your thoughts here..." }),
       defineHighlight(),
-      defineTextColor()
+      defineTextColor(),
     );
     return createEditor({ extension });
   }, []);
@@ -203,7 +206,8 @@ const Editor = () => {
           <EditorContent saveNote={saveNote} editorInstance={editorInstance} status={status} />
         </ProseKit>
       </main>
-      <Toolbar editorInstance={editorInstance} saveNote={saveNote} title={title.value}/> {/*Static Toolbar*/}
+      <Toolbar editorInstance={editorInstance} saveNote={saveNote} title={title.value} />{" "}
+      {/*Static Toolbar*/}
       {!isZenMode.value && <Footer status={status} />}
     </div>
   );

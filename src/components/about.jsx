@@ -1,7 +1,7 @@
+import "prosekit/basic/typography.css";
+
 import "./styles/about.css";
 import "./styles/prosekit.css";
-
-import "prosekit/basic/typography.css";
 
 import Footer from "./footer.jsx";
 

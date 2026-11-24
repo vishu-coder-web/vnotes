@@ -1,9 +1,10 @@
+import { Search, XIcon, Settings, BadgeAlert } from "lucide-preact";
 import { useEffect } from "preact/hooks";
 import { useSignal } from "@preact/signals";
 import { useLocation } from "wouter-preact";
-import { Search, XIcon, Settings, BadgeAlert } from "lucide-preact";
 
 import "./styles/sidebar.css";
+
 import { currentOpenedNote, isSidebarOpen, isMobile } from "../store/notes.store.js";
 import { searchNoteDB, notesQuery } from "../database/db.web.js";
 import { safeRun } from "../utils/error_handler.js";

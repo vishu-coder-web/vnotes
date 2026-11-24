@@ -2,6 +2,7 @@ import { effect } from "@preact/signals";
 import { useSignalRef } from "@preact/signals/utils";
 
 import "./styles/dialog.css";
+
 import { dialogData } from "../store/notes.store.js";
 
 const Dialog = () => {

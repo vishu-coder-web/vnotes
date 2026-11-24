@@ -1,14 +1,13 @@
-import { Show } from "@preact/signals/utils";
+import { Show, useSignalRef } from "@preact/signals/utils";
 import { useEffect } from "preact/hooks";
 import { Route, Switch } from "wouter-preact";
-import { useSignalRef } from "@preact/signals/utils";
 
 import "./app.css";
+
 import { shortcuts, isLoaded, isZenMode, isSidebarOpen } from "./store/notes.store.js";
 import { showToolips, showDialog } from "./store/notes.helper.js";
 import { general, appearance, editor, keyboardShortcuts } from "./store/settings.store.js";
 import { getShortcut } from "./utils/keyboard_shortcuts.js";
-
 import { applyTheme } from "./utils/theme_manager.js";
 
 import Sidebar from "./components/sidebar.jsx";
@@ -20,6 +19,7 @@ import Dialog from "./components/dialog.jsx";
 import About from "./components/about.jsx";
 import Settings from "./components/settings.jsx";
 import InputBox from "./components/inputBox.jsx";
+import NoPageFound from "./components/noPageFound.jsx";
 
 export const App = () => {
   const startX = useSignalRef(0);
@@ -113,7 +113,7 @@ export const App = () => {
 
     darkModeMediaQuery.addEventListener("change", handleThemeChange);
 
-    // A welcome text for our User
+    // A welcome text
     showDialog(
       "Welcome To VNotes",
       `
@@ -176,10 +176,13 @@ export const App = () => {
           <Route path="/editor" component={Editor} />
           <Route path="/about" component={About} />
           <Route path="/settings" component={Settings} />
+          <Route path="/settings" component={Settings} />
+
+          {/* No Page Found Component */}
+          <Route component={NoPageFound} />
         </Switch>
 
         {!isZenMode.value && <Fab />}
-
         <Dialog />
         <InputBox />
       </Show>
