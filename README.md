@@ -14,8 +14,7 @@
 
 <p align="center">
   <a href="https://github.com/vishu-coder-web/vnotes">GitHub Repository</a> •
-  <a href="https://vnotes-vishu.vercel.app/">Try Demo</a> •
-  <a href="https://github.com/vishu-coder-web/vnotes/releases">Download</a>
+  <a href="https://vnotes-vishu.vercel.app/">Try Demo</a>
 </p>
 
 <p align="center">
