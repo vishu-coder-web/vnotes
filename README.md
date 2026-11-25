@@ -154,6 +154,7 @@ VNotes is built using modern web technologies.
 | Split.js | Resizable layouts |
 | Dexie.js | IndexedDB database management |
 | Vite | Development and build tooling |
+| NeutralinoJs | Native Desktop Wrapper  |
 
 ## Contributing
 
