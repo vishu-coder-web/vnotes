@@ -1,6 +1,7 @@
 import { Show, useSignalRef } from "@preact/signals/utils";
 import { useEffect } from "preact/hooks";
-import { Route, Switch } from "wouter-preact";
+import { Router, Route, Switch } from "wouter-preact";
+import { useHashLocation } from "wouter-preact/use-hash-location";
 
 import "./app.css";
 
@@ -169,20 +170,24 @@ export const App = () => {
       {isSidebarOpen.value && <div className="blur-element"></div>}
 
       <Show when={isLoaded} fallback={<Splash />}>
-        {!isZenMode.value && <Sidebar />}
+        <Router hook={useHashLocation}>
 
-        <Switch>
-          <Route path="/" component={About} />
-          <Route path="/editor" component={Editor} />
-          <Route path="/about" component={About} />
-          <Route path="/settings" component={Settings} />
-          <Route path="/settings" component={Settings} />
+          {!isZenMode.value && <Sidebar />}
 
-          {/* No Page Found Component */}
-          <Route component={NoPageFound} />
-        </Switch>
+          <Switch>
+            <Route path="/" component={About} />
+            <Route path="/editor" component={Editor} />
+            <Route path="/about" component={About} />
+            <Route path="/settings" component={Settings} />
+            <Route path="/settings" component={Settings} />
 
-        {!isZenMode.value && <Fab />}
+            {/* No Page Found Component */}
+            <Route component={NoPageFound} />
+          </Switch>
+
+          {!isZenMode.value && <Fab />}
+        </Router>
+
         <Dialog />
         <InputBox />
       </Show>
